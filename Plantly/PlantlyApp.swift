@@ -1,0 +1,17 @@
+import SwiftUI
+
+@main
+struct PlantlyApp: App {
+    
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    
+    var body: some Scene {
+        WindowGroup {
+            if isOnboarding {
+                OnboardingView()
+            } else {
+                ContentView()
+            }
+        }
+    }
+}
